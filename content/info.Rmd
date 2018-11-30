@@ -1,0 +1,108 @@
+---
+title: "Resources"
+author: "Zhen Li"
+date: "2018-11-28"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+```{r setup, echo=F}
+knitr::opts_chunk$set(cache = TRUE)
+setwd("~/zhen/scripts/zhenli.name2/content/")
+library(DT)
+library(openxlsx)
+```
+
+
+<!-- In this page, you will find various useful resources related to single cell genomics, including: -->
+
+<!-- * [List of human neocortex single cell RNA-seq datasets](#anchor1) -->
+<!-- * [List of human organoid single cell RNA-seq datasets](#anchor2) -->
+<!-- * List of mouse single cell RNA-seq datasets -->
+<!-- * List of single cell genomics datasets -->
+
+# Single cell RNA-seq Datasets
+
+## Human
+
+```{r, message=F, warning=F, include=F, echo=F}
+dt1 <- read.xlsx("./single_cell_RNA-seq.xlsx",sheet = 1,rowNames = F)
+d1 <- datatable(dt1, escape = F, extensions = "Responsive", options  = list(autoWidth = F))
+```
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(htmlwidgets)
+library(htmltools)
+
+htmlwidgets::saveWidget(d1, file = "d1.html", selfcontained = TRUE)
+```
+
+<iframe seamless src="../d1/index.html" width="100%" height="500"></iframe>
+
+## Mouse
+
+```{r, message=F, warning=F, include=F, echo=F}
+dt2 <- read.xlsx("./single_cell_RNA-seq.xlsx",sheet = 2,rowNames = F)
+d2 <- datatable(dt2, escape = F, extensions = "Responsive", options  = list(autoWidth = F))
+```
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(htmlwidgets)
+library(htmltools)
+
+htmlwidgets::saveWidget(d2, file = "d2.html", selfcontained = TRUE)
+```
+
+<iframe seamless src="../d2/index.html" width="100%" height="500"></iframe>
+
+## Human organoid
+```{r, message=F, warning=F, include=F, echo=F}
+dt3 <- read.xlsx("./single_cell_RNA-seq.xlsx",sheet = 3,rowNames = F)
+d3 <- datatable(dt3, escape = F, options  = list(autoWidth = F))
+```
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(htmlwidgets)
+library(htmltools)
+
+htmlwidgets::saveWidget(d3, file = "d3.html", selfcontained = TRUE)
+```
+
+<iframe seamless src="../d3/index.html" width="100%" height="500"></iframe>
+
+---
+
+# Other resources
+<div class="row">
+<div class="column left">
+<a href="http://www.brainspan.org/">BrainSpan</a>
+</div>
+<div class="column right">
+<p>A large transcriptome database of the developing human brain.</p>
+</div>
+</div>
+<div class="row">
+<div class="column left">
+<a href="http://hbatlas.org/mouseNCXtranscriptome/">Mouse Neocortical Transcriptome</a>
+</div>
+<div class="column right">
+Atlas of gene expressions in mouse brain, including coding and some noncoding genes. It shows rough layer information.
+</div>
+</div>
+<div class="row">
+<div class="column left">
+<a href="http://psychencode.org/">PsychENCODE</a>
+</div>
+<div class="column right">
+Collection of data from the PsychENCODE consortium. This large dataset include RNA-seq, CHIP-seq, genomic sequencing and proteomics data of the developing human brain and numerous brain regions.
+</div>
+</div>
+<div class="row">
+<div class="column left">
+<a href="https://david.ncifcrf.gov/">DAVID Gene Ontology</a>
+</div>
+<div class="column right">
+Classic gene ontology analysis website.
+</div>
+</div>

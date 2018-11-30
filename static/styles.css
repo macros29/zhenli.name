@@ -1,0 +1,156 @@
+i {
+  position: relative;
+}
+
+.disclaimer {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin-bottom: 0;
+}
+
+.disclaimer p {
+    flex-shrink: 1;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)}
+
+/* Container for flexboxes */
+.flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the content */
+.aboutMe {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 10px;
+    -webkit-animation-name: aboutMe;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;  /* Safari 4.0 - 8.0 */
+    -moz-animation-name: aboutMe;
+    -moz-animation-duration: 2s;
+    animation-name: aboutMe;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes aboutMe {
+    from {right: -200px; opacity: 0;}
+    to {right: 0; opacity: 1;}
+}
+
+@keyframes aboutMe {
+    from {right: -200px; opacity: 0;}
+    to {right: 0; opacity: 1;}
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+
+button {
+  font-size: 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: DodgerBlue;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.text{
+  display: none;
+}
+
+.img-circle {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin: 20px;
+  -webkit-animation-name: img-circle;  /* Safari 4.0 - 8.0 */
+  -moz-animation-name: img-circle;
+  -webkit-animation-duration: 2s;  /* Safari 4.0 - 8.0 */
+  -moz-animation-duration: 2s;
+  animation-name: img-circle;
+  animation-duration: 2s;
+}
+
+.img-circle img {
+  display: inline;
+  margin: 0 auto;
+  min-height: 110%;
+  min-width: 160%;
+  margin-left: -25%;
+  margin-top: -10%;
+}
+
+@-webkit-keyframes img-circle {
+    from {left: -200px; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+@keyframes img-circle {
+    from {left: -200px; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+.text {
+  color: black;
+  font-size: 16px;
+  padding: 0 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+  float: left;
+  width: 25%;
+}
+
+.right {
+  float: right;
+  width: 75%;
+}
+
+.paper {
+  border-style: dashed;
+  padding: 1px;
+  font-size: 12px;
+  background-color: transparent;
+  border-width: 1px;
+  color: white;
+}
+
+.paper:hover {
+    background-color: white; /* Green */
+    opacity: 50%;
+    color: DodgerBlue;
+}

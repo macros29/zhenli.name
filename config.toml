@@ -15,7 +15,6 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "yourdiscussshortname"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$", "\\.R$"]
 
-
 [params]
     author = "Zhen Li"
     description = "Zhen Li's personal website"

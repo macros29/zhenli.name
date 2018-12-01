@@ -5,7 +5,7 @@ date: 2018-11-28
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
-
+<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -30,7 +30,7 @@ $(document).ready(function() {
 </script>
 
 </head>
-
+<body>
 <section class="flex">
 
 <div class="img-circle">
@@ -70,3 +70,5 @@ $(document).ready(function() {
 </div>
 </article>
 </section>
+</body>
+</html>

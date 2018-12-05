@@ -1,5 +1,5 @@
 +++
-title = "Combining Nowakowski et al., 2017 and BrainSpan datasets"
+title = "Combining Multiple Single cell RNA-seq Datasets"
 author = "Zhen Li"
 date = 2018-10-21
 +++
@@ -177,7 +177,7 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>Since single cell RNA-seq becomes an affordable and accessible technology to any lab around the world, there have been a lot of datasets generated (For a list of existing dataset, visit the <a href="\info\index.html">Resource</a> page). The number of cells in these datasets ranges from hundreds to thousnads, to even tens of thousands. To use all of these datasets more efficiently, it is a good idea to combine them. What are the criteria that need to be implemented in order to successfully combine the datasets？ I want to explore it in this and the next few blog posts. </p>
+<h3>Since single cell RNA-seq becomes an affordable and accessible technology to any lab around the world, there have been a lot of datasets generated (For a list of existing dataset, visit the <a href="\info\index.html">Resource</a> page). The number of cells in these datasets ranges from hundreds to thousnads, to even tens of thousands. To use all of these datasets more efficiently, it is a good idea to combine them. Bigger number of cells will lead to more accurate representation of cell types and time points, which are difficult to achieve in a single experiment or by a single lab - the benefits of combining datasets are obvious. But what are the criteria that need to be implemented in order to successfully combine the datasets？ What kind of analyses can we do after combining the datasets? I will explore these and related topics in the blog posts. </h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
@@ -189,6 +189,9 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMgUHJlcGFyZSBOb3dha293c2tpIGRhdGFzZXRzXG5kZjAubm93YUBtZXRhLmRhdGEkbWFqb3JfY2VsbF90eXBlMiA8LSBkZjAubm93YUBtZXRhLmRhdGEkbWFqb3JfY2VsbF90eXBlIFxuZGYwLm5vd2FAbWV0YS5kYXRhJG1ham9yX2NlbGxfdHlwZTJbZGYwLm5vd2FAbWV0YS5kYXRhJG1ham9yX2NlbGxfdHlwZTIgJWluJSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYyhcIk9QQ1wiLCBcIk1pY3JvZ2xpYVwiLCBcIkdseWNcIiwgXCJDaG9yb2lkXCIsIFwiRW5kb3RoZWxpYWxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIkFzdHJvY3l0ZVwiLCBcIk11cmFsXCIsIFwiTWljcm9nbGlhXCIpXSA8LSBcIm90aGVyXCJcbmRmMC5ub3dhIDwtIFNldEFsbElkZW50KGRmMC5ub3dhLCBpZCA9IFwibWFqb3JfY2VsbF90eXBlMlwiKVxuYGBgIn0= -->
+
+<h3>To start, I chose to work on the BrainSpan single cell dataset and a dataset published by <a href="http://science.sciencemag.org/content/358/6368/1318">Nowakowski et al. in 2017</a>. I chose these datasets because both of them were generated using the <a href="https://www.fluidigm.com/products/c1-system">Fluidigm C1 Single Cell Auto Prep System (C1)</a>, which was the first commercialized single cell cDNA library preparation platform. Therefore, combining these datasets should be relatively straightforward. But we still need to normalize the datasets and bring with to the same scale, otherwise the combined datasets will not make much sense. Let's start with data preparation. I will use the <a href="https://satijalab.org/seurat/">Seurat</a> package to manage data. </h3>
+
 <pre class="r"><code>## Prepare Nowakowski datasets
 df0.nowa@meta.data$major_cell_type2 &lt;- df0.nowa@meta.data$major_cell_type
 df0.nowa@meta.data$major_cell_type2[df0.nowa@meta.data$major_cell_type2 %in%

@@ -50,6 +50,29 @@ i {
     to {right: 0; opacity: 1;}
 }
 
+.about {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    position: relative
+    padding: 10px;
+    -webkit-animation-name: about;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */
+    -moz-animation-name: avatar
+    -moz-animation-duration: 3s;
+    animation-name: avatar
+    animation-duration: 3s;
+}
+@-webkit-keyframes about {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes about {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
     section {

@@ -12,7 +12,8 @@ pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "Comment"
+disable_comments = false
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$", "\\.R$",
 "content/post/draft/*"]
 
@@ -62,7 +63,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$", "\\
 [[menu.main]]
     name = "Blog"
     weight = 2
-    url  = "/post/"
+    url  = "/posts/"
 [[menu.main]]
     name = "Resources"
     weight = 3

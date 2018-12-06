@@ -12,7 +12,7 @@ pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "Comment"
+disqusShortname = "zhenli-name"
 disable_comments = false
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$", "\\.R$",
 "content/post/draft/*"]

@@ -1,0 +1,12 @@
+<li>
+  <span>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+  <a href="{{ .URL }}">{{ .Title }}</a>
+  <p>
+  {{ with .Description }}
+  {{ $.Scratch.Set "summary" (markdownify .) }}
+		{{ else }}
+		  {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>.*?</p>\\s*)" .Content 1) "[&hellip;] ") | plainify | truncate (default 400 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+		{{ end }}
+   {{ $.Scratch.Get "summary" }}
+  </p>
+</li>

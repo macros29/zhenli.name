@@ -15,7 +15,7 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "zhenli-name"
 disable_comments = false
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$", "\\.R$",
-"content/post/draft/*"]
+"content/posts/draft/*"]
 
 [params]
     author = "Zhen Li"

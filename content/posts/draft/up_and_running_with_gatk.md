@@ -1,5 +1,5 @@
 +++
-title = "Download and align single cell RNA-seq data: Part I"
+title = "Up and running with GATK"
 author = "Zhen Li"
 date = 2018-12-12
 +++

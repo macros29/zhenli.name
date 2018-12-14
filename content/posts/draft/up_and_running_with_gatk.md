@@ -32,6 +32,10 @@ gatk --java-options "-Xmx8G" SplitNCigarReads -R ~/zhen/Reference_genome/hg38/hg
 ```
 
 ```
+gatk --java-options "-Xmx8G" HaplotypeCaller -R ~/zhen/Reference_genome/hg38/hg38.fa -I split.bam --dont-use-soft-clipped-bases -stand-call-conf 20.0 -O split_output.vcf
+```
+
+```
 input=dedupped
 gatk --java-options "-Xmx8G" HaplotypeCaller -R ~/zhen/Reference_genome/hg38/hg38.fa -I dedupped.bam --dont-use-soft-clipped-bases -stand-call-conf 20.0 -O dedupped_output.vcf
 ```

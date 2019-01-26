@@ -2,10 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
 </head>
 <body>
-
 <table id="example" class="display" style="width:100%">"
 <thead>
 <tr>
@@ -15,7 +13,7 @@
 <th>Age</th>
 <th>Num of cells</th>
 <th>Source</th>
-<th>Seq Depth</th>
+<th>Seq Depth/cell</th>
 <th>Genes/cell</th>
 </tr>
 </thead>
@@ -77,7 +75,7 @@
 <td>E9.5-11.5</td>
 <td>1916</td>
 <td>Multiple organs</td>
-<td>0.43M UMI/cell</td>
+<td>0.43M UMI</td>
 <td>6361</td>
 </tr>
 <tr>
@@ -117,12 +115,21 @@
 <td>E14.5, P4/5, P30, P100, P540, injury</td>
 <td>76149</td>
 <td>Microglia</td>
-<td>40,000 – 60,000 reads / sample</td>
+<td>40,000 – 60,000 reads </td>
 <td>?</td>
+</tr>
+<tr>
+<td><a href=”https://www.nature.com/articles/s41467-018-08079-9#Bib1” target=”_blank”>Loo</a></td>
+<td>Drop-seq</td>
+<td>3’</td>
+<td>E14.5, P0</td>
+<td>10,931 at E14.5; 7614 at P0</td>
+<td>Cortex</td>
+<td>12,000 reads</td>
+<td>1600</td>
 </tr>
 </tbody>
 </table>
-
 <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script>

@@ -9,95 +9,105 @@ tags: ["R Markdown", "plot", "regression"]
 
 
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"></p>
-<script>
-$(document).ready(function() {
-  $("#toggle").click(function() {
-    var elem = $("#toggle").text(),
-    if (elem == "Show More") {
-      //Stuff to do when btn is in the show more state
-      $("#toggle").text("Show Less"),
-      $(".text").slideDown(),
-    } else {
-      //Stuff to do when btn is in the show less state
-      $("#toggle").text("Show More"),
-      $(".text").slideUp(),
-    }
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"></p>
+
+  <script>
+  $(document).ready(function() {
+    $("#toggle").click(function() {
+      var elem = $("#toggle").text(),
+      if (elem == "Show More") {
+        //Stuff to do when btn is in the show more state
+        $("#toggle").text("Show Less"),
+        $(".text").slideDown(),
+      } else {
+        //Stuff to do when btn is in the show less state
+        $("#toggle").text("Show More"),
+        $(".text").slideUp(),
+      }
+    }),
   }),
-}),
-</script>
-</head>
-<body>
-<section class="flex">
-<div class="img-circle">
-<p><img src="images/DSC_1415.JPG" /></p>
-</div>
-<article class="aboutMe">
-<h1>
-Hello!
-</h1>
-<p>
-My name is Zhen Li. I am a Postdoc working in Dr. Joseph G. Gleeson’s laboratory, at University of California, San Diego. I use single cell genomics technologies to study brain development and diseases. I completed my PhD training at Yale University, under the supervision of Dr. Nenad Sestan. I will periodically update this website with information I found useful or interesting. Please stop by!
-</p>
-</article>
-</section>
-<section class="flex">
-<article class="aboutMe" style="background-color:#99ccff">
-<h1>
-Publications
-</h1>
-<p>
-<i style="color:#696969">* indicates co-first authorship</i>
-</p>
-<p>
-Wang D., Liu S., Warrell J., Won H., Shi X., Navarro F. C. P., Clarke D., Gu M., Emani P., Yang Y. T. et al. (2018). <i>Comprehensive functional genomic resource and integrative model for the human brain.</i> <b>Science</b> 362:eaat8464 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545857"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Gandal M. J., Zhang P., Hadjimichael E., Walker R. L., Chen C., Liu S., Won H., van Bakel H., Varghese M., Wang Y. et al. (2018). <i>Transcriptome-wide isoform-level dysregulation in ASD, schizophrenia, and bipolar disorder.</i> <b>Science</b> 362:eaat8127 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545856"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Rajarajan P., Borrman T., Liao W., Schrode N., Flaherty E., Casiño C., Powell S., Yashaswini C., LaMarca E. A., Kassim B. et al. (2018). <i>Revealing the brain's molecular architecture.</i> <b>Science</b> 362:1262-1263 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545881"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Amiri A.*, Coppola G.*, Scuderi S.*, Wu F.*, Roychowdhury T.*, Liu F., Pochareddy S. et al. (2018). <i>Transcriptome and epigenome landscape of human cortical development modeled in organoids.</i> <b>Science</b> DOI: 10.1126/science.aat7615 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545853"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Li M.*, Santpere G.*, Kawasawa Y. I.*, Evgrafov O. V.*, Gulden F. O.*, Pochareddy S.*, Sunkin S. M.*, <b>Li Z.*</b>, Shin Y.* et al. (2018). <i>Integrative functional genomic analysis of human brain development and neuropsychiatric risks.</i> <b>Science</b> DOI: 10.1126/science.aat7615 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545854"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Fan L., <b>Li Z.</b> and Yuan P. (2018). Wearable Pulse Waveform Measurement System and Method. US Patent App. 15/843,608 <a href="https://patents.google.com/patent/US20180168466A1/en"><button class="paper">Google Patents</button></a>
-</p>
-<p>
-Castiglioni V., Faedo A., Onorati M., Bocchi V. D., <b>Li Z.</b>, Lennaco, R., Vuono, R., Bulfamante, G. P., Muzio, L., Martino, G., Sestan, N., Barker, R. A. and Cattaneo E. (2018). <i>Dynamic and Cell-Specific DACH1 Expression in Human Neocortical and Striatal Development.</i> <b>Cerebral Cortex.</b> DOI: 10.1093/cercor/bhy092 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29688344"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Mi D.*, <b>Li Z.*</b>, Lim L., Li M., Moissidis M., Yang Y., Gao T., Hu T. X., Pratt T., Price D., Sestan N. and Marín O. (2018). <i>Early emergence of cortical interneuron diversity in the mouse embryo.</i> <b>Science</b> 360(6384). 81-85. <a href="https://www.ncbi.nlm.nih.gov/pubmed/29472441"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Gu Z., Kalamboglas J., Yoshioka S., Han W., <b>Li Z.</b>, Imamura Kawasawa Y., Pochareddy S., Li Z., Liu F., Xu X., Wijeratne S., Ueno M., Blatz E., Salomone J., Kumanogoh A., Rasin M.R., Gebelein B., Weirauch M.T., Sestan N., Martin J.H., and Yoshida Y (2017). <i>Control of species-dependent cortico-motoneuronal connections underlying manual dexterity.</i> <b>Science</b> 357(6349). 400-404. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28751609"><button class="paper">PubMed</button></a>
-</p>
-<span class="text">
-<p>
-Yang J., Tanaka Y., Seay M., <b>Li Z.</b>, Jin J., Garmire L.X. et al. (2016). <i>Single cell transcriptomics reveals unanticipated features of early hematopoietic precursors.</i> <b>Nuc. Aci. Res.</b>, 45(3). 1281 1296. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28003475"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Onorati M.*, <b>Li Z.*</b>, Liu F.*, Sousa A.M.M.*, Nakagawa N., Li M., Dell’Anno M. T., Goulden F. O., Pochareddy S., Tebbenkamp A. T. N., Han W., Pletikos M. et al. (2016) <i>Zika virus disrupts phospho-tbk1 localization and mitosis in human neuroepithelial stem cells and radial glia.</i> <b>Cell Reports</b>, 16. 2576 2592. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27568284"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Akbarian S, Liu C, Knowles JA, Vaccarino FM, Farnham PJ, Crawford GE, et al. (2015). <i>The PsychENCODE project.</i> <b>Nat. Neurosci.</b> 18. 170712. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26605881"><button class="paper">PubMed</button></a>
-</p>
-<p>
-Hasan S., Liu L., Triplet J, <b>Li Z.</b> and Mansur D. (2013). <i>The role of postoperative radiation and chemoradiation in Merkel cell carcinoma: a systematic review of the literature.</i> <b>Front. Oncol.</b> 3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/24294591"><button class="paper">PubMed</button></a>
-</p>
-</span>
-<button id="toggle" style="float: right,">
-Show More
-</button>
-</article>
-</section>
-</body>
+  </script>
+
+  </head>
+
+  <body>
+    <section class="flex">
+
+      <div class="img-circle">
+        <p> <img src="images/DSC_1415.JPG" /> </p>
+      </div>
+
+      <article class="aboutMe">
+        <h1>
+          Hello!
+        </h1>
+        <p>
+          My name is Zhen Li. I am a Postdoc working in Dr. Joseph G. Gleeson’s laboratory, at University of California, San Diego. I use single cell genomics technologies to study brain development and diseases. I completed my PhD training at Yale University, under the supervision of Dr. Nenad Sestan. I will periodically update this website with information I found useful or interesting. Please stop by!
+        </p>
+      </article>
+
+    </section>
+
+    <section class="flex">
+      <article class="aboutMe" style="background-color:#99ccff">
+        <h1>
+          Publications
+        </h1>
+        <p>
+          <i style="color:#696969">* indicates co-first authorship</i>
+        </p>
+        <p>
+          Wang D., Liu S., Warrell J., Won H., Shi X., Navarro F. C. P., Clarke D., Gu M., Emani P., Yang Y. T. et al. (2018). <i>Comprehensive functional genomic resource and integrative model for the human brain.</i> <b>Science</b> 362:eaat8464 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545857"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Gandal M. J., Zhang P., Hadjimichael E., Walker R. L., Chen C., Liu S., Won H., van Bakel H., Varghese M., Wang Y. et al. (2018). <i>Transcriptome-wide isoform-level dysregulation in ASD, schizophrenia, and bipolar disorder.</i> <b>Science</b> 362:eaat8127 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545856"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Rajarajan P., Borrman T., Liao W., Schrode N., Flaherty E., Casiño C., Powell S., Yashaswini C., LaMarca E. A., Kassim B. et al. (2018). <i>Revealing the brain's molecular architecture.</i> <b>Science</b> 362:1262-1263 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545881"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Amiri A.*, Coppola G.*, Scuderi S.*, Wu F.*, Roychowdhury T.*, Liu F., Pochareddy S. et al. (2018). <i>Transcriptome and epigenome landscape of human cortical development modeled in organoids.</i> <b>Science</b> DOI: 10.1126/science.aat7615 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545853"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Li M.*, Santpere G.*, Kawasawa Y. I.*, Evgrafov O. V.*, Gulden F. O.*, Pochareddy S.*, Sunkin S. M.*, <b>Li Z.*</b>, Shin Y.* et al. (2018). <i>Integrative functional genomic analysis of human brain development and neuropsychiatric risks.</i> <b>Science</b> DOI: 10.1126/science.aat7615 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30545854"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Fan L., <b>Li Z.</b> and Yuan P. (2018). Wearable Pulse Waveform Measurement System and Method. US Patent App. 15/843,608 <a href="https://patents.google.com/patent/US20180168466A1/en"><button class="paper">Google Patents</button></a>
+        </p>
+        <p>
+          Castiglioni V., Faedo A., Onorati M., Bocchi V. D., <b>Li Z.</b>, Lennaco, R., Vuono, R., Bulfamante, G. P., Muzio, L., Martino, G., Sestan, N., Barker, R. A. and Cattaneo E. (2018). <i>Dynamic and Cell-Specific DACH1 Expression in Human Neocortical and Striatal Development.</i> <b>Cerebral Cortex.</b> DOI: 10.1093/cercor/bhy092 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29688344"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Mi D.*, <b>Li Z.*</b>, Lim L., Li M., Moissidis M., Yang Y., Gao T., Hu T. X., Pratt T., Price D., Sestan N. and Marín O. (2018). <i>Early emergence of cortical interneuron diversity in the mouse embryo.</i> <b>Science</b> 360(6384). 81-85. <a href="https://www.ncbi.nlm.nih.gov/pubmed/29472441"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Gu Z., Kalamboglas J., Yoshioka S., Han W., <b>Li Z.</b>, Imamura Kawasawa Y., Pochareddy S., Li Z., Liu F., Xu X., Wijeratne S., Ueno M., Blatz E., Salomone J., Kumanogoh A., Rasin M.R., Gebelein B., Weirauch M.T., Sestan N., Martin J.H., and Yoshida Y (2017). <i>Control of species-dependent cortico-motoneuronal connections underlying manual dexterity.</i> <b>Science</b> 357(6349). 400-404. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28751609"><button class="paper">PubMed</button></a>
+        </p>
+
+        <span class="text">
+        <p>
+          Yang J., Tanaka Y., Seay M., <b>Li Z.</b>, Jin J., Garmire L.X. et al. (2016). <i>Single cell transcriptomics reveals unanticipated features of early hematopoietic precursors.</i> <b>Nuc. Aci. Res.</b>, 45(3). 1281 1296. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28003475"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Onorati M.*, <b>Li Z.*</b>, Liu F.*, Sousa A.M.M.*, Nakagawa N., Li M., Dell’Anno M. T., Goulden F. O., Pochareddy S., Tebbenkamp A. T. N., Han W., Pletikos M. et al. (2016) <i>Zika virus disrupts phospho-tbk1 localization and mitosis in human neuroepithelial stem cells and radial glia.</i> <b>Cell Reports</b>, 16. 2576 2592. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27568284"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Akbarian S, Liu C, Knowles JA, Vaccarino FM, Farnham PJ, Crawford GE, et al. (2015). <i>The PsychENCODE project.</i> <b>Nat. Neurosci.</b> 18. 170712. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26605881"><button class="paper">PubMed</button></a>
+        </p>
+        <p>
+          Hasan S., Liu L., Triplet J, <b>Li Z.</b> and Mansur D. (2013). <i>The role of postoperative radiation and chemoradiation in Merkel cell carcinoma: a systematic review of the literature.</i> <b>Front. Oncol.</b> 3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/24294591"><button class="paper">PubMed</button></a>
+        </p>
+        </span>
+
+        <button id="toggle" style="float: right">
+          Show More
+        </button>
+
+      </article>
+    </section>
+  </body>
 </html>
